@@ -23,7 +23,7 @@ app.get("/home", (req, res) => {
 
 app.get("/:username/:id", (req, res) => { //IT IS USE TO SEND THE USERNAME AND ID TO THE PARTICULAR PAGE FOR EG INSTAGRAM SEARCH FOR ANY PARTICULAR PERSON 
     let {username,id}=req.params;
-    res.send(`Hello ${username}`);
+    res.send(`Hello ${username} and your Id is :${id}`);
 })
 
 app.get("/search", (req, res) => { //IT IS USE TO SEND THE QUERY IN THE SEARCH (http://localhost:8080/search?q=apple&color=green)
