@@ -2,13 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roll Dice</title>
 </head>
 
 <body>
-    <h1>DICE GAVE THE VALUE : <%=num %>
+    <!-- INSTEAD OF GETTING THE LOGICS FROM JS FILE WE CAN WRITE THE LOOP AND CONDITIONAL STATEMENTS HERE ONLY USING INTERPOLATION SYNTAX -->
+    <h1>
+        DICE GAVE THE VALUE : <% if (num==6) { %>
+            <h1>
+                <%=num%>
+            </h1>
+            <%} %>
     </h1>
 </body>
 

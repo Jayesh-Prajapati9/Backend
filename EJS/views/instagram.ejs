@@ -10,6 +10,17 @@
 <body>
     <h2>This page belong to <%= username%>
     </h2>
+    <h3>
+        <!-- HERE FOLLOWERS ARRAY IS PASSED FROM INDEX.JS AND IT IS WRRITTEN IN HTML USING INTERPOLATION SYNTAX -->
+        Followers Are :
+        <ul>
+            <% for (let name of followers) { %>
+                <li>
+                    <%= name %>
+                </li>
+                <% }%>
+        </ul>
+    </h3>
     <button>Follow</button><button>Message</button>
 </body>
 
