@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h3>GET REQUEST FORM</h3>
+    <!-- GET REQUEST IS USED WHEN YOU ARE REQUEST FOR SOME OUTPUT FROM DATABASE FOR EX SEARCHING ANY THING IN GOOGLE THEN IT IS THE GET REQUEST AND IT HAS DATA IN IT FOR EG: file:///C:/register?user=Jayesh&password=1234 HERE USERNAME AND PASSWORD IS PRESENT IN THE URL -->
+    <form action="http://localhost:8080/register" method="get">
+        <input type="text" name="user" placeholder="Enter Your UserName">
+        <input type="password" name="password" placeholder="Enter Your Password">
+        <button>Submit</button>
+
+    </form>
+    <hr>
+    <h3>POST REQUEST FORM</h3>
+    <!-- POST REQUEST IS USED TO STORE THE DATA TO DATABASE AND THE DATA HERE CAN BE IN ANY FORM BUT IN THE GET REQUEST DATA IS ALWAYS IN FORM OF STRING -->
+     <form action="http://localhost:8080/register" method="post"> <!-- HERE YOU HAVE TO CHANGE THE PROTOCAL FROM FILE TO HTTP SERVER WHICH WE HAVE CREATED -->
+        <input type="text" name="user" placeholder="Enter Your UserName">
+        <input type="password" name="password" placeholder="Enter Your Password">
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+
+</html>
