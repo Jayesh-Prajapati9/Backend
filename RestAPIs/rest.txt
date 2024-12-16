@@ -1,0 +1,24 @@
+REST : Representational State Transfer
+-> It is a set of constraint to be usedfor creating web services.
+-> It is a architectural style for designing networked hypermedia applications.
+-> RestFull apis are the apis which apply the concept or rules of rest.
+-> It is neither library nor packages. It is just set of rules.
+-> It just guide us in how to write our own apis.
+-> These apis are used in crude operation. 
+C -> Apis endpoint to create something new
+R -> Apis endpoint to just read the data
+U -> Apis endpoint to Update the data
+D -> Apis endpoint to Delete the data
+
+GET : Retrives resources
+POST : Submits New Data To Server
+PUT : Updates Existing Data
+PATCH : Updates Existing Data Partially
+DELETE : Removes Data 
+
+APIs are always created on name for eg: if you are working on the posts then your resources are Posts so 
+GET api would be /posts
+
+
+UUID : Universally unique identifier
+-> It is used to create id automactically while not using db.
