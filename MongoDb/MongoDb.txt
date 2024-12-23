@@ -1,0 +1,68 @@
+                                        MONGO DB
+
+-> The data in the Mongo is stored in BSON Type (Binary JSON).
+-> The parsing of JSON is difficult so we use BSON type and it is space insuffient.
+-> Mongo will convert the JSON data provided by user into Binary form i.e in BSON format.
+-> BSON have more data type than JSON type.
+
+# Document And Collection In MongoDb:
+
+-> Document: stores the data in form of documents (BSON Docs). (It is like the tuple entry from SQL)
+-> Collection: MongoDb stores all the documents in collection. (It is like the table from SQL)
+
+# Insertion In MongoDb:
+
+-> INSERT ONE 
+
+-> db.collection.insertOne( {name: "Jay", marks: 85} )
+-> Here collection is your table name and if the collection is not present then it will create the collection and then store it.
+-> Everytime when data is inserted, unique ID is created for that particular document.
+For eg: 
+->  db.student.insertOne({name:"Abc",marks:90})
+    {
+        acknowledged: true,
+        insertedId: ObjectId('6764186175e20a1b9479a1b6')
+    }
+-> In Mongo we can insert new document completely different from last in same collection.
+For eg:
+->  db.student.insertOne({name:"Jay",age:20})
+    {
+        acknowledged: true,
+        insertedId: ObjectId('6764192f75e20a1b9479a1b7')
+    }
+
+->TO INSERT MANY
+
+-> To insert multiple documents at a same time we use : 
+-> db.collection.insertMany( [ {name: "JP", marks: 85}, {name:"EFG",age:20} ] )
+-> Here all documents entries are in form of array.
+For eg:
+->  db.student.insertMany([{name:"JP",marks:85},{name:"EFG",age:20}])
+    {
+        acknowledged: true,
+        insertedIds: 
+        {
+            '0': ObjectId('67641a3575e20a1b9479a1b8'),
+            '1': ObjectId('67641a3575e20a1b9479a1b9')
+        }
+    }
+
+-> TO FIND IN MongoDb
+
+-> To find any document from collection we use 
+-> db.collection.find()
+-> This will give all the document present in the collection.     
+For eg: 
+->  db.student.find()
+    [
+        { _id: ObjectId('6764186175e20a1b9479a1b6'), name: 'Abc', marks: 90 },
+        { _id: ObjectId('6764192f75e20a1b9479a1b7'), name: 'Jay', age: 20 },
+        { _id: ObjectId('67641a3575e20a1b9479a1b8'), name: 'JP', marks: 85 },
+        { _id: ObjectId('67641a3575e20a1b9479a1b9'), name: 'EFG', age: 20 }
+    ]
+ 
+TO FIND ON BASIS OF KEY VALUE PAIR:
+
+-> to find the document on the basis of key and value pair then we use following syntax:
+-> db.student.fine({name:"JP"})
+-> This will return the cursor which is iterable and all the document which has the given {key,value} pair.
